@@ -13,7 +13,16 @@ public class RockPaperSissorsEvaluator {
      * @return the respective winning move
      */
     public String getWinningMove(String handSign) {
-        return null;
+        if (handSign.equals(ROCK)){
+            return PAPER;
+        }
+        if (handSign.equals(PAPER)){
+            return SCISSOR;
+        }
+        if (handSign.equals(SCISSOR)){
+            return ROCK;
+        }
+        return ROCK;
     }
 
     /**
@@ -21,7 +30,16 @@ public class RockPaperSissorsEvaluator {
      * @return the respective losing move
      */
     public String getLosingMove(String handSign) {
-        return null;
+        if (handSign.equals(ROCK)){
+            return SCISSOR;
+        }
+        if (handSign.equals(PAPER)){
+            return ROCK;
+        }
+        if (handSign.equals(SCISSOR)){
+            return PAPER;
+        }
+        return handSign;
     }
 
     /**
@@ -30,6 +48,33 @@ public class RockPaperSissorsEvaluator {
      * @return a string representative of the winning hand sign between the two players
      */
     public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2) {
-        return null;
+        if (handSignOfPlayer1.equals(ROCK) && handSignOfPlayer2.equals(PAPER)) {
+            return PAPER;
+        }
+        if (handSignOfPlayer1.equals(ROCK) && handSignOfPlayer2.equals(SCISSOR)) {
+            return ROCK;
+        }
+        if (handSignOfPlayer1.equals(ROCK) && handSignOfPlayer2.equals(ROCK)) {
+            return "tie";
+        }
+        if (handSignOfPlayer1.equals(PAPER) && handSignOfPlayer2.equals(PAPER)) {
+            return "tie";
+        }
+        if (handSignOfPlayer1.equals(PAPER) && handSignOfPlayer2.equals(SCISSOR)) {
+            return SCISSOR;
+        }
+        if (handSignOfPlayer1.equals(PAPER) && handSignOfPlayer2.equals(ROCK)) {
+            return SCISSOR;
+        }
+        if (handSignOfPlayer1.equals(SCISSOR) && handSignOfPlayer2.equals(PAPER)) {
+            return SCISSOR;
+        }
+        if (handSignOfPlayer1.equals(SCISSOR) && handSignOfPlayer2.equals(SCISSOR)) {
+            return "tie";
+        }
+        if (handSignOfPlayer1.equals(SCISSOR) && handSignOfPlayer2.equals(ROCK)) {
+            return ROCK;
+        }
+        return ROCK;
     }
 }

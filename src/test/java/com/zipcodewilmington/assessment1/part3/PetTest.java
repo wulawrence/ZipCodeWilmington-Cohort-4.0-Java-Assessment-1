@@ -7,6 +7,7 @@ import org.junit.Test;
  * Created by leon on 2/16/18.
  */
 public class PetTest {
+
     @Test
     public void testInheritance() {
         Pet p = new Dog();
