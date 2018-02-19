@@ -1,7 +1,7 @@
 package com.zipcodewilmington.assessment1.part3;
 
-import java.util.Arrays;
-import java.util.List;
+        import java.util.Arrays;
+        import java.util.List;
 
 /**
  * Created by leon on 2/16/18.
@@ -23,16 +23,13 @@ public class PetOwner {
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
-        for (int i = 0; i < pets.length; i++) {
-            if (pets[i] == (null)) {
-                pets[i] = pet;
-            }
+
         }
-    }
+
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
-    public boolean removePet(Pet pet) {
+    public void removePet(Pet pet) {
         for (int i = 0; i < pets.length; i++) {
             if ((pets[i].equals(pet))) {
                 pets[i] = null;
@@ -41,21 +38,6 @@ public class PetOwner {
             }
 
         }
-        return false;
-    }
-    public void sortNullToEnd() {
-        int counter = 0;
-
-        Pet[] tempArray = Arrays.copyOf(this.pets, this.pets.length);
-        for (int i = 0; i < this.pets.length; i++) {
-            if (!(pets[i] == null)) {
-                tempArray[counter] = pets[i];
-                counter++;
-            }
-        }
-        tempArray[pets.length - 1] = null;
-        this.pets = tempArray;
-
     }
 
     /**
@@ -63,7 +45,7 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+        return true;
     }
 
     /**
@@ -95,20 +77,21 @@ public class PetOwner {
      * @return the number of Pet objects stored in this class
      */
     public Integer getNumberOfPets() {
-        return null;
+        return pets.length;
     }
 
     /**
      * @return the name property of the Pet
      */
     public String getName() {
-        return null;
+        return this.name;
     }
 
     /**
      * @return array representation of animals owned by this PetOwner
      */
     public Pet[] getPets() {
-        return null;
+        return this.pets;
     }
+
 }
