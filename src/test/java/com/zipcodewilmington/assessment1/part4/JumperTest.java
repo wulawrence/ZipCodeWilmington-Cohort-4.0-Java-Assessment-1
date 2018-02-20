@@ -29,7 +29,7 @@ public class JumperTest {
         // Should assert to true
         Jumper jumper = new Jumper();
         Integer expected = jumper.jumps(3,3);
-        Integer actual = 1;
+        Integer actual = 3;
         Assert.assertEquals(expected, actual);
 
     }

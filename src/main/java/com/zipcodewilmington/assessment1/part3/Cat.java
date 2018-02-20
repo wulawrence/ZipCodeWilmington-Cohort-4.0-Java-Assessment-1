@@ -26,7 +26,7 @@ public class Cat extends Pet {
         return this.age;
     }
     public void setAge(Integer age){
-        this.age = age.MAX_VALUE;
+        this.age = age;
     }
 
     /**

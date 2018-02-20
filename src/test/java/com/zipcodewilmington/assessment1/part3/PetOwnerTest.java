@@ -35,7 +35,6 @@ public class PetOwnerTest {
         // When
         po.addPet(expected);
         Pet actual = po.getPets()[0];
-        System.out.println(expected);
 
         // Then
         Assert.assertEquals(actual, expected);
